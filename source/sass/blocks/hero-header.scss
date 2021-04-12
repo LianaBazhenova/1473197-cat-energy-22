@@ -1,0 +1,36 @@
+.hero-header {
+  background-image: url("../img/index-background-cat.jpg");
+  background-repeat: no-repeat;
+}
+
+.hero-header__wrapper {
+  //background-color: $basic-green-opacity;
+  //height: 302px;
+}
+
+.hero-header__heading {
+  padding: 27px 35px 25px;
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic-white;
+  margin: 0;
+  font-weight: 400;
+  //text-align: center;
+}
+
+.hero-header__slogan {
+  color: $basic-white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0 62px 29px 60px;
+}
+
+.hero-header__image {
+  padding-bottom: 3px;
+}
+
+.hero-header__button {
+  padding: 7px 44px;
+}

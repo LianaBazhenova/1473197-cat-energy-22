@@ -1,0 +1,25 @@
+.main-nav__list {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $basic-black;
+  list-style: none;
+}
+
+.main-nav__item {
+  padding-bottom: 46px;
+}
+
+.main-nav__list a {
+  text-decoration: none;
+  color: $basic-black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,41 @@
+.program-selection {
+  padding-top: 22px;
+}
+
+.program-selection__list {
+  list-style: none;
+  margin: 0;
+}
+
+.program-selection__heading {
+  margin: 0;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $basic-black;
+}
+
+.program-selection__intro {
+  margin: 0;
+  padding: 22px 0 38px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", "Verdana", sans-serif;
+}
+
+.program-selection__link {
+  color: $basic-black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:active {
+    color: $basic-black-opacity;
+  }
+}
+
+.program-selection__item {
+  padding-bottom: 20px;
+}

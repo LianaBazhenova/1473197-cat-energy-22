@@ -1,0 +1,31 @@
+.advantages__heading {
+  color: $basic-black;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  padding-bottom: 38px;
+  margin: 0;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.advantages__image {
+  padding-right: 20px;
+}
+
+.advantages__description {
+  margin: 0;
+  font-family: "Arial", "Verdana", sans-serif;
+}
+
+.advantages__number {
+  display: none;
+}
