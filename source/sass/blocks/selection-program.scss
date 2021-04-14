@@ -15,6 +15,9 @@
 .selection-program__text {
   margin: 0;
   padding-top: 37px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-black;
 }
 
 .selection-program__fieldset {
@@ -80,6 +83,8 @@
 
 .selection-program__label {
   padding-right: 12px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .selection-program__radio-list {
@@ -95,6 +100,12 @@
   &:last-child {
     padding-bottom: 0;
   }
+}
+
+.selection-program__radio-label,
+.selection-program__checkbox-label {
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .selection-fieldset {
@@ -116,7 +127,17 @@
 .selection-program__textarea {
   border: 1px solid $special-border;
   resize: none;
+  width: 280px;
   height: 151px;
+  color: $basic-black;
+
+  &::placeholder {
+    padding: 9px 12px 15px;
+    text-transform: uppercase;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .comment-fieldset {

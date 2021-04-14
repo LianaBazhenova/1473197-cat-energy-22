@@ -6,6 +6,7 @@
   color: $special-text;
   margin: 0;
   padding-top: 28px;
+  //padding-left: 20px;
 }
 
 .map__address {
@@ -14,4 +15,14 @@
   line-height: 20px;
   font-family: "Arial", "Verdana", sans-serif;
   padding-bottom: 26px;
+}
+
+.map__wrapper {
+  &--color {
+    background-color: $basic-background;
+  }
+}
+
+.map__image {
+  background-color: $special-border;
 }
