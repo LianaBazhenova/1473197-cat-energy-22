@@ -8,16 +8,18 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
+  padding: 27px 20px 0;
   font-weight: 400;
   text-transform: none;
 }
 
 .selection-program__text {
   margin: 0;
-  padding-top: 37px;
   font-size: 14px;
   line-height: 18px;
   color: $basic-black;
+  text-transform: uppercase;
+  padding: 37px 20px 0;
 }
 
 .selection-program__fieldset {
@@ -27,26 +29,20 @@
 }
 
 .representation-fieldset {
-  margin: 39px 0 24px;
-}
-
-.selection-program__item {
-  margin-bottom: 14px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  padding: 39px 0 24px;
+  //display: grid;
+  //grid-row-gap: 14px;
 }
 
 .selection-program__input {
   border: 1px solid $special-border;
   height: 45px;
-  padding: 0 16px;
+  padding-left: 16px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   color: $basic-text;
-
+  font-family: "Oswald", "Arial", sans-serif;
 
   &:hover {
     border: 1px solid $special-checkbox;
@@ -90,8 +86,9 @@
 .selection-program__radio-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   color: $checkbox-text;
+  text-transform: uppercase;
 }
 
 .selection-program__radio-item {
@@ -109,11 +106,21 @@
 }
 
 .selection-fieldset {
-  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid $special-border-2;
+  border-bottom: 1px solid $special-border-2;
 }
 
 .contacts-fieldset {
   margin: 25px 0;
+}
+
+.selection-program__fieldset .selection-program__item {
+  padding-bottom: 14px;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 .selection-program__legend {
@@ -127,7 +134,7 @@
 .selection-program__textarea {
   border: 1px solid $special-border;
   resize: none;
-  width: 280px;
+  width: 274px;
   height: 151px;
   color: $basic-black;
 
@@ -168,7 +175,8 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  padding: 7px 44px;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .selection-program__paragraph {
@@ -176,4 +184,8 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 21px 0 32px;
 }
