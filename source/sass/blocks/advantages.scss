@@ -9,12 +9,18 @@
 
 .advantages__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__item {
   padding-bottom: 20px;
   display: flex;
   align-items: center;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .advantages__image {
@@ -24,6 +30,8 @@
 .advantages__description {
   margin: 0;
   font-family: "Arial", "Verdana", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .advantages__number {

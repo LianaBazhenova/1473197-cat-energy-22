@@ -1,21 +1,26 @@
 .hero-header {
-  background-image: url("../img/index-background-cat.jpg");
-  background-repeat: no-repeat;
-}
-
-.hero-header__wrapper {
-  //background-color: $basic-green-opacity;
-  //height: 302px;
+  &::before {
+    content: " ";
+    background-image: linear-gradient($basic-green-opacity, $basic-green-opacity),
+      url("../img/index-background-cat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    padding-top: 100%;
+  }
 }
 
 .hero-header__heading {
-  padding: 25px 35px;
+  padding: 27px 0 25px;
   font-size: 36px;
   line-height: 36px;
   color: $basic-white;
   margin: 0;
   font-weight: 400;
-  //text-align: center;
+  text-align: center;
 }
 
 .hero-header__slogan {
@@ -24,13 +29,20 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
-  padding: 0 60px 29px;
+  //padding: 0 60px 29px;
+  text-align: center;
 }
 
 .hero-header__image {
-  padding-bottom: 3px;
+  padding: 29px 0 0;
 }
 
 .hero-header__button {
-  padding: 7px 44px;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-header .button {
+  margin: 0 20px;
 }

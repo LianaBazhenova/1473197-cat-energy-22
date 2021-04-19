@@ -5,10 +5,14 @@
   text-transform: uppercase;
   color: $basic-black;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .main-nav__item {
-  padding-bottom: 46px;
+  padding: 22px 0 24px;
+  border-top: 1px solid $special-border-nav;
 }
 
 .main-nav__list a {
@@ -21,5 +25,28 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.main-nav__toggle {
+  border: none;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+
+  &--open {
+    background: url("..//img/icon/burger_mobile.svg");
+    width: 24px;
+    height: 18px;
+    top: 27px;
+    right: 20px;
+  }
+
+  &--close {
+    background: url("../img/icon/close_mobile.svg");
+    width: 20px;
+    height: 20px;
+    top: 26px;
+    right: 23px;
   }
 }

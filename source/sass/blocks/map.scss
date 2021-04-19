@@ -5,8 +5,7 @@
   text-transform: uppercase;
   color: $special-text;
   margin: 0;
-  padding-top: 28px;
-  //padding-left: 20px;
+  //padding-top: 28px;
 }
 
 .map__address {
@@ -14,13 +13,13 @@
   font-size: 14px;
   line-height: 20px;
   font-family: "Arial", "Verdana", sans-serif;
-  padding-bottom: 26px;
+  //padding-bottom: 26px;
 }
 
 .map__wrapper {
-  &--color {
-    background-color: $basic-background;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 20px 26px;
 }
 
 .map__image {
