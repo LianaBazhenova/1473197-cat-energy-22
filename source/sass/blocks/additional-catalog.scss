@@ -1,0 +1,54 @@
+.additional-catalog {
+  position: relative;
+}
+
+.additional-catalog__heading {
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+  font-weight: 400;
+
+  &::after {
+    content: "";
+    width: 51px;
+    border: 1px solid $basic-green;
+    left: 267px;
+    top: 14px;
+    position: absolute;
+  }
+}
+
+.additional-catalog__background-wrapper {
+  background-image: url("../img/gift-photo-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  margin-bottom: 35px;
+  display: grid;
+}
+
+.additional-catalog__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 39px;
+}
+
+.additional-catalog__image {
+  justify-self: center;
+  padding-top: 58px;
+}
+
+.additional-catalog__text {
+  color: $basic-white;
+  text-align: center;
+  padding: 48px 61px 43px 58px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Arial", "Verdana", sans-serif;
+}
+
+.additional-catalog__button {
+  margin-bottom: 19px;
+}
