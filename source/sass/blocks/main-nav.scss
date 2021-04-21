@@ -11,7 +11,7 @@
 }
 
 .main-nav__item {
-  padding: 22px 0 24px;
+  padding: 21px 0 24px;
   border-top: 1px solid $special-border-nav;
 
   &:last-child {
@@ -42,15 +42,15 @@
     background: url("..//img/icon/burger_mobile.svg");
     width: 24px;
     height: 18px;
-    top: 27px;
-    right: 20px;
+    top: 22px;
+    right: 22px;
   }
 
   &--close {
     background: url("../img/icon/close_mobile.svg");
     width: 20px;
     height: 20px;
-    top: 26px;
-    right: 23px;
+    top: 22px;
+    right: 22px;
   }
 }

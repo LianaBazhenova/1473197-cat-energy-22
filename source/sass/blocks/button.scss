@@ -6,6 +6,13 @@
   line-height: 18px;
   background-color: $basic-green;
   text-decoration: none;
+  border: none;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  &--secondary {
+    color: $basic-black;
+    background-color: $basic-background;
+  }
 
   &:hover {
     background-color: $basic-green-2;
