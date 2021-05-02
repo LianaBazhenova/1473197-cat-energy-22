@@ -1,3 +1,7 @@
+.map {
+  position: relative;
+}
+
 .map__heading {
   font-size: 16px;
   line-height: 18px;
@@ -6,6 +10,11 @@
   color: $special-text;
   margin: 0;
   //padding-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .map__address {
@@ -14,18 +23,43 @@
   line-height: 20px;
   font-family: "Arial", "Verdana", sans-serif;
   //padding-bottom: 26px;
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 20px 26px;
+  padding: 28px 19px 26px;
 
   &--color {
     background-color: $basic-background;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 71px 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 89px 60px 76px;
+    position: absolute;
+    width: 405px;
+    //height: 201px;
+    top: 95px;
+    left: 110px;
+    background-color: $basic-white;
   }
 }
 
 .map__image {
   background-color: $special-border;
+  width: 100%;
+  border: none;
+  //padding: 0;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
