@@ -46,7 +46,7 @@
   }
 }
 
-.main-nav__list a {
+.main-nav__link {
   text-decoration: none;
   color: $basic-black;
 
@@ -59,7 +59,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    color: $basic-white;
+    &--white {
+      color: $basic-white;
+    }
   }
 }
 

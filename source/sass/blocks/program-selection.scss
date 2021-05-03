@@ -9,8 +9,8 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    justify-content: space-between;
     //flex-wrap: wrap; // при проверке на переполнение если делаю wrap, то program-selection__item уезжает вниз (
-    //justify-content: space-between;
     margin-top: 320px;
   }
 }
@@ -35,7 +35,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     margin: 0 80px 0 0;
     padding: 40px 52px 0 52px;
-    width: 570px;
+    width: 50%;
 
     &:last-child {
       margin-right: 0;
