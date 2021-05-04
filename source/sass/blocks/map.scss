@@ -32,14 +32,22 @@
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 19px 26px;
+  padding: 28px 0 26px;
 
   &--color {
     background-color: $basic-background;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 66px 71px 61px;
+    padding: 66px 31px 61px;
+
+    &--color {
+      background-color: $basic-background;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -48,8 +56,18 @@
     width: 405px;
     //height: 201px;
     top: 95px;
-    left: 110px;
+    //left: 110px;
+    margin: 0 auto;
+    //max-width: 1220px;
     background-color: $basic-white;
+  }
+}
+
+.map__container {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1220px;
   }
 }
 

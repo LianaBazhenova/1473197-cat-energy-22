@@ -8,14 +8,20 @@
 
   @media (min-width: $desktop-width) {
     border-top: none;
+    //margin: 0 auto;
+    //max-width: 1220px;
+    background-color: $basic-background;
   }
 }
+
 
 .example__wrap {
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: $basic-background;
+    //background-color: $basic-background;
+    margin: 0 auto;
+    max-width: 1220px;
   }
 }
 
@@ -35,7 +41,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 69px 110px 76px;
+    // padding: 69px 110px 76px;
+    //background-color: $basic-white;
+    padding: 0;
+    margin-top: -100px;
   }
 }
 
@@ -48,10 +57,6 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 70px;
   }
 }
 
@@ -151,6 +156,8 @@
 .slider {
   position: relative;
   //overflow: hidden;
+
+  padding: 0;
 }
 
 .example__list {
@@ -168,15 +175,18 @@
 }
 
 .example__wrapper {
+  padding: 0 20px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     flex-wrap: wrap;
-    padding-right: 175px;
+    padding: 0 175px 0 0;
   }
 }
 
@@ -200,7 +210,7 @@
   @media (min-width: $desktop-width) {
     background-color: $basic-background;
     margin-top: 0;
-    padding: 325px 0 67px 40px;
+    padding: 325px 0 67px;
     justify-content: left;
   }
 }
