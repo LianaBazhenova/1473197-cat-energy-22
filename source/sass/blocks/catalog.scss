@@ -1,3 +1,14 @@
+.catalog {
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .catalog__heading {
   font-size: 36px;
   line-height: 36px;
@@ -5,10 +16,23 @@
   font-weight: 400;
   padding: 27px 20px 41px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 164px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .catalog__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 140px;
+  }
 }

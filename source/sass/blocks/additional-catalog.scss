@@ -2,19 +2,29 @@
   position: relative;
 }
 
+
 .additional-catalog__heading {
   font-size: 24px;
   line-height: 24px;
   color: $basic-black;
   font-weight: 400;
+  padding: 25px 0 34px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
 
   &::after {
     content: "";
-    width: 51px;
-    border: 1px solid $basic-green;
-    left: 267px;
-    top: 14px;
-    position: absolute;
+    //width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background: $basic-green;
+    //left: 267px;
+    //top: 38px;
+    //position: absolute;
+    margin-left: 22px;
   }
 }
 
@@ -50,5 +60,5 @@
 }
 
 .additional-catalog__button {
-  margin-bottom: 19px;
+  margin-bottom: 15px;
 }
