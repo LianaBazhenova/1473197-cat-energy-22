@@ -39,11 +39,13 @@
   padding: 27px 20px 0;
   font-weight: 400;
   text-transform: none;
+  /* border-top: 1px solid $special-border-2; */
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
     padding: 0 70px 0;
+    border-top: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -93,6 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &:last-of-type {
     padding-bottom: 0;
@@ -113,6 +116,7 @@
   color: $basic-text;
   font-family: "Oswald", "Arial", sans-serif;
   width: 100%;
+  appearance: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -152,6 +156,33 @@
     fill: $special-error;
   }
 }
+
+.selection-program__input-icon {
+  position: absolute;
+
+  &--email {
+    top: 16px;
+    right: 15px;
+  }
+
+  &--phone {
+    top: 13px;
+    right: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--email {
+      top: 19px;
+      right: 19px;
+    }
+
+    &--phone {
+      top: 15px;
+      right: 17px;
+    }
+  }
+}
+
 
 .selection-program__label {
   padding-right: 15px;
@@ -232,11 +263,7 @@
     font-size: 36px;
     line-height: 36px;
     padding-top: 65px;
-    padding-bottom: 76px; // потом поправлю отступы, когда все буду равнять по пиксель-перфект
-  }
-
-  @media (min-width: $desktop-width) {
-    // padding: 0 110px;
+    padding-bottom: 76px; /*потом поправлю отступы, когда все буду равнять по пиксель-перфект*/
   }
 }
 
@@ -281,10 +308,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    // display: grid;
-    //  grid-template-columns: repeat(4, 1fr);
-    // grid-gap: 104px;
-    //white-space: nowrap;
+    /*display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 104px;
+    white-space: nowrap;*/
   }
 }
 
