@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 0 58px;
+    padding: 57px 110px 58px;
   }
 }
 
@@ -33,10 +33,6 @@
     padding: 0;
     border-bottom: none;
   }
-
-  @media (min-width: $desktop-width) {
-    //padding: 5px 413px 0 0;
-  }
 }
 
 .social__list {
@@ -51,20 +47,24 @@
     padding: 0;
     border-bottom: none;
   }
-
-  @media (min-width: $desktop-width) {
-    // padding: 0 385px 0 0;
-  }
 }
 
 .social__item {
   &:nth-child(1) {
     padding-right: 36px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 27px;
+    }
   }
 
 
   &:nth-child(2) {
     padding-right: 33px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 21px;
+    }
   }
 }
 
