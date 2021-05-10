@@ -6,7 +6,7 @@
     border-bottom: 1px solid $special-border-3;
 
     @media (min-width: $tablet-width) {
-      border-bottom: none;
+      border-bottom: 2px solid $basic-background;
     }
   }
 
@@ -14,15 +14,60 @@
     border-top: none;
     background-color: $basic-background;
     max-height: 430px;
+
+    &--other {
+      background-color: $basic-white;
+      border: 2px solid $basic-background;
+    }
   }
 }
 
 .product--small {
   border-top: 1px solid $special-checkbox;
   min-height: 129px;
+  background-color: $basic-white;
 
   &:last-child {
     border-bottom: 1px solid $special-checkbox;
+  }
+
+  @media (max-width: $tablet-width) {
+
+    border-top: none;
+    border-bottom: 1px solid $special-checkbox;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: 1px solid $special-checkbox;
+  }
+}
+
+.product--small .product__item {
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.product__wrapper-small {
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.product__wrapper-small .product__description {
+  @media (min-width: $tablet-width) {
+    padding-right: 49px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
 
@@ -42,16 +87,24 @@
   }
 }
 
+.product__title .product__br-tablet {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.product__title .product__br-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .product__link {
   cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin-bottom: 24px;
-
-  &--pro {
-    // margin-bottom: 12px;  // отступ снизу у ссылки на корм 1000г
-  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr;
@@ -68,11 +121,12 @@
   justify-self: center;
 
   &--pro {
-    padding-top: 9px;  // отступ сверху у корма 1000г
+    padding-top: 9px;  /* отступ сверху у корма 1000г*/
   }
 
   @media (min-width: $tablet-width) {
-    // margin: -50px; // потом нужно будет сдвинуть
+    /* margin: -50px; // потом нужно будет сдвинуть*/
+    padding-top: 0;
   }
 }
 
@@ -85,6 +139,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 40px 40px;
+
+    &--pro {
+      padding-top: 52px;
+    }
   }
 }
 
@@ -105,6 +163,10 @@
   }
 }
 
+.additional-catalog__list .product__item {
+  border-bottom: none;
+}
+
 .product__description {
   font-size: 12px;
   line-height: 16px;
@@ -119,6 +181,11 @@
 .product--small .product__description {
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .product__list {
@@ -154,6 +221,12 @@
 .product__icon {
   justify-self: center;
   padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    padding: 0 0 53px;
+  }
 }
 
 .product__heading {
@@ -170,6 +243,24 @@
     color: $special-text;
     padding: 23px 0 8px;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 0 23px 0;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .product__heading br,
+  .product__text br {
+    display: none;
   }
 }
 
@@ -180,4 +271,10 @@
   text-align: center;
   padding-bottom: 21px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    padding-bottom: 87px;
+  }
 }
