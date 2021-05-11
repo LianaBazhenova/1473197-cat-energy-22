@@ -1,4 +1,4 @@
-// Colors
+/* Colors */
 
 $basic-green: #68b738;
 $basic-green-2: #5eaa2f;
@@ -25,7 +25,8 @@ $special-error: #ff8282;
 
 $special-border-nav: #e6e6e6;
 
-// Viewports
+/* Viewports */
 
+$mobile-width-only: 767px;
 $tablet-width: 768px;
-$desktop-width: 1440px; // поправить потом на 1440 , это для теста
+$desktop-width: 1440px;

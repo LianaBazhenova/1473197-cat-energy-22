@@ -5,17 +5,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    &::before {
-      background-image: linear-gradient($basic-green-opacity, $basic-green-opacity),
-        url("../img/index-background-cat-desktop.jpg");
-      background-position: 50vw 100%;
-      content: " ";
-      background-repeat: no-repeat;
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      padding-top: 48.2%; // Правильно ли это ? по пиксель перфект делала
-    }
+    margin: 0 auto;
+    max-width: 1220px;
   }
 }
 
@@ -29,7 +20,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 53px 110px; //когда поменяю лого, изменятся паддинги
+    padding: 53px 0 0; //когда поменяю лого, изменятся паддинги
   }
 }
 
