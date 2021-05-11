@@ -1,4 +1,16 @@
 .page-header {
+  &--closed {
+    @media (max-width: $mobile-width-only) {
+      border-bottom: 1px solid $special-border-2;
+    }
+  }
+
+  &--opened {
+    @media (max-width: $mobile-width-only) {
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
