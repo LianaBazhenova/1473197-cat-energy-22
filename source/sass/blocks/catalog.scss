@@ -6,6 +6,7 @@
   @media (min-width: $desktop-width) {
     max-width: 1220px;
     margin: 0 auto;
+    padding: 0 110px;
   }
 }
 
@@ -22,6 +23,10 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 75px 0 165px;
+  }
 }
 
 .catalog__list {
@@ -34,5 +39,11 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 60px;
     grid-row-gap: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 144px;
   }
 }
