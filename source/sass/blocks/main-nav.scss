@@ -66,7 +66,7 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    padding: 42px 30px 74px 0;
+    margin: 42px 30px 65px 0;
     display: flex;
     flex-wrap: wrap;
     text-align: start;
@@ -76,7 +76,7 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 68px 0 32px 0;
+    margin: 68px 0 32px 0;
     width: 478px;
   }
 }
@@ -84,6 +84,7 @@
 .main-nav__item {
   padding: 21px 0 24px;
   border-top: 1px solid $special-border-nav;
+  position: relative;
 
   &:last-child {
     border-bottom: 1px solid $special-border-nav;
@@ -91,14 +92,40 @@
 
   @media (min-width: $tablet-width) {
     border: none;
-    padding: 0 34px 0 0;
+    padding: 0;
+    margin: 0 34px 0 0;
 
     &:last-child {
-      padding-right: 0;
+      margin-right: 0;
       border-bottom: none;
+    }
+
+    &--active {
+      padding-bottom: 10px;
+
+      @media (min-width: $tablet-width) {
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          background: $basic-green;
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--white {
+        &::after {
+          background: $basic-white;
+        }
+      }
     }
   }
 }
+
 
 .main-nav__link {
   text-decoration: none;

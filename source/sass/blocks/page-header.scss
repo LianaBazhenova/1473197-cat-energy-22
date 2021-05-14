@@ -28,11 +28,11 @@
   grid-template-columns: repeat(3, 1fr);
 
   @media (min-width: $tablet-width) {
-    padding: 30px 30px;  //когда поменяю лого, изменятся паддинги
+    padding: 25px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 53px 0 0; //когда поменяю лого, изменятся паддинги
+    padding: 53px 0 0;
   }
 }
 
@@ -43,4 +43,25 @@
 .page-header__logo-text {
   padding-top: 12px;
   justify-self: center;
+}
+
+.page-header__image {
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: auto;
+  }
+}
+
+.page-header__text {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

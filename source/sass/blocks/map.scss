@@ -36,14 +36,14 @@
 .map__address-span {
   @media (min-width: $tablet-width) {
     display: block;
-    margin-top: 15px;
+    margin-top: 19px;
   }
 }
 
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 0 26px;
+  padding: 31px 0 26px;
 
   &--color {
     background-color: $basic-background;
@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 66px 31px 61px;
+    padding: 65px 39px 61px;
 
     &--color {
       background-color: $basic-background;
