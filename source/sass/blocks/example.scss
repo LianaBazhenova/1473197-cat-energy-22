@@ -33,7 +33,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 43px 30px 63px;
+    padding: 43px 0 63px;
     margin: 0;
   }
 
@@ -138,6 +138,7 @@
   @media (min-width: $desktop-width) {
     background-color: $basic-background;
     width: calc(100% - 5px);
+    transform: translateY(5px);
   }
 }
 
@@ -282,7 +283,7 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    height: 503px;
+    //height: 503px;
     left: 43px;
     top: 59px;
 
@@ -303,6 +304,8 @@
       left: initial;
       right: 383px;
       width: 343px;
+      height: 520px;
+      top: 40px;
     }
   }
 
