@@ -8,8 +8,6 @@
 
   @media (min-width: $desktop-width) {
     border-top: none;
-    //margin: 0 auto;
-    //max-width: 1220px;
     background-color: $basic-background;
   }
 }
@@ -19,7 +17,6 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //background-color: $basic-background;
     margin: 0 auto;
     max-width: 1220px;
   }
@@ -30,7 +27,7 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  padding: 30px 20px 0;
+  padding: 30px 0 0;
   margin: 40px 0 30px;
 
   @media (min-width: $tablet-width) {
@@ -41,10 +38,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    // padding: 69px 110px 76px;
-    //background-color: $basic-white;
     padding: 0;
-    margin-top: -100px;
+    margin-top: -134px;
   }
 }
 
@@ -57,6 +52,10 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
   }
 }
 
@@ -110,22 +109,35 @@
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    line-height: 14px;
+    transform: translateY(3px);
     background-color: $basic-white;
     padding-top: 11px;
-    width: 140px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column-gap: 7px;
+    width: calc(100% - 5px);
+    align-items: center;
 
-    /* &:first-of-type { // Не знаю как сделать правильней чтобы прерывалался бордер,
-      width: 118px;     // позиционированием .example__description?
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: $special-checkbox;
     }
 
-    &:nth-of-type(1) {
-      width: 145px;
-    }*/
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: $special-checkbox;
+    }
   }
 
   @media (min-width: $desktop-width) {
     background-color: $basic-background;
+    width: calc(100% - 5px);
   }
 }
 
@@ -136,7 +148,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding: 10px 0 23px;
+  padding: 10px 0 21px;
 
   @media (min-width: $tablet-width) {
     padding: 65px 0 0;
@@ -147,16 +159,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 436px;        //скорее всего не верно указывать размеры , но указала потому что на планшете укaзывала для
-    text-align: left;    // переноса на новую строку
+    width: 436px;
+    text-align: left;
     padding: 0;
+  }
+}
+
+.example__total span {
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
   }
 }
 
 .slider {
   position: relative;
-  //overflow: hidden;
-
   padding: 0;
 }
 
@@ -204,13 +220,12 @@
     background-color: $special-background;
     padding: 364px 25px 66px;
     margin-top: 213px;
-    //position: relative;
   }
 
   @media (min-width: $desktop-width) {
     background-color: $basic-background;
     margin-top: 0;
-    padding: 325px 0 67px;
+    padding: 325px 0 67px 41px;
     justify-content: left;
   }
 }
@@ -255,31 +270,54 @@
 
   &--slim {
     left: 38px;
+    display: none;
+    width: 251px;
+    height: 240px;
+  }
+
+  &--pro {
+    width: 311px;
+    height: 232px;
   }
 
   @media (min-width: $tablet-width) {
-    width: auto;   // наверно так указывать размеры не правильно, но пока так оставлю
+    width: auto;
     height: 503px;
     left: 43px;
     top: 59px;
 
     &--slim {
-      left: 135px;
-      height: 520px; // на глаз пока указала размер
+      height: 520px; /* на глаз пока указала размер*/
       top: 45px;
+      display: block;
+      object-fit: cover;
+      object-position: right;
+      left: initial;
+      right: 85px;
+      width: 298px;
+    }
+
+    &--pro {
+      object-fit: cover;
+      object-position: left;
+      left: initial;
+      right: 383px;
+      width: 343px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    //width: auto;   // наверно так указывать размеры не правильно, но пока так оставлю
-    //height: 503px;
-    left: -40px;
-    top: -175px;
-
     &--slim {
-      left: 50px;
-      //height: 520px; // на глаз пока указала размер
-      top: -190px;
+      top: -193px;
+      left: initial;
+      right: 13px;
+      width: 268px;
+    }
+
+    &--pro {
+      top: -181px;
+      width: 361px;
+      right: 281px;
     }
   }
 }
@@ -290,7 +328,7 @@
   height: 12px;
   border: 1px solid $special-checkbox;
   border-radius: 6px;
-  margin-top: 4px;
+  margin: 4px 10px 0;
   justify-self: center;
   position: relative;
 
@@ -312,7 +350,6 @@
   margin: 3px 6px 0;
 
   @media (min-width: $tablet-width) {
-    //display: none;
     position: absolute;
     width: 8px;
     height: 8px;
