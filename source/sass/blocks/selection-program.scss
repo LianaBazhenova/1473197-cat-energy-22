@@ -4,7 +4,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    padding: 0 110px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 80px;
@@ -15,19 +15,20 @@
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     position: relative;
-    max-width: 1220px;
+    max-width: 1440px;
   }
 }
 
 .selection-program__wrapper {
   padding: 0 20px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    padding: 0 110px;
   }
 }
 
@@ -39,7 +40,6 @@
   padding: 27px 20px 0;
   font-weight: 400;
   text-transform: none;
-  /* border-top: 1px solid $special-border-2; */
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -49,7 +49,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 0 0;
+    padding: 45px 110px 0;
   }
 }
 
@@ -68,7 +68,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 54px 0 66px;
+    padding: 58px 110px 66px;
   }
 }
 
@@ -109,7 +109,7 @@
 .selection-program__input {
   border: 1px solid $special-border;
   height: 41px;
-  padding-left: 16px;
+  padding-left: 15px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
@@ -122,6 +122,11 @@
     font-size: 20px;
     line-height: 30px;
     height: 49px;
+    padding-left: 21px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 17px;
+    }
   }
 
   &:hover {
@@ -173,26 +178,49 @@
   @media (min-width: $tablet-width) {
     &--email {
       top: 19px;
-      right: 19px;
+      right: 15px;
     }
 
     &--phone {
-      top: 15px;
-      right: 17px;
+      top: 17px;
+      right: 15px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--email {
+      top: 20px;
+      right: 18px;
+    }
+
+    &--phone {
+      right: 18px;
     }
   }
 }
 
-
 .selection-program__label {
-  padding-right: 15px;
+  padding-right: 12px;
   font-size: 16px;
   line-height: 18px;
   white-space: nowrap;
 
+  &--phone {
+    padding-right: 10px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-right: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 21px;
+
+    &--phone {
+      padding-right: 15px;
+    }
   }
 }
 
@@ -204,11 +232,22 @@
   text-transform: uppercase;
 }
 
+
 .selection-program__radio-item {
-  padding-bottom: 13px;
+  margin-bottom: 27px;
+  padding-left: 45px;
 
   &:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 68px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
   }
 }
 
@@ -216,6 +255,10 @@
 .selection-program__checkbox-label {
   font-size: 16px;
   line-height: 18px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: block;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -223,13 +266,57 @@
   }
 }
 
+.selection-program__radio-input + .selection-program__radio-label::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: -3px;
+  width: 29px;
+  height: 29px;
+  border: 1px solid $special-checkbox;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 38px;
+    height: 38px;
+    left: -60px;
+  }
+}
+
+.selection-program__radio-label:hover::before {
+  border: 1px solid $special-checkbox-hover;
+}
+
+.selection-program__radio-input:checked + .selection-program__radio-label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -37px;
+  width: 14px;
+  height: 14px;
+  background-color: $basic-green;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: -49px;
+    top: 8px;
+  }
+}
+
+.selection-program__radio-input:disabled + .selection-program__radio-label {
+  opacity: 0.3;
+}
+
 .selection-fieldset {
-  padding: 20px 0;
+  padding: 24px 0;
   border-top: 1px solid $special-border-2;
   border-bottom: 1px solid $special-border-2;
 
   @media (min-width: $tablet-width) {
     border: 1px solid $special-border;
+    padding: 27px 0;
   }
 }
 
@@ -250,6 +337,14 @@
 .contacts-fieldset {
   margin: 25px 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 80px 0 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 68px 0 67px;
+  }
 }
 
 .selection-program__legend {
@@ -258,12 +353,51 @@
   line-height: 26px;
   color: $basic-black;
   padding-bottom: 35px;
+  position: relative;
+  align-items: center;
+  display: flex;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green;
+    left: 100%;
+    position: absolute;
+    margin-left: 20px;
+    top: 16px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 65px;
-    padding-bottom: 76px; /*потом поправлю отступы, когда все буду равнять по пиксель-перфект*/
+    padding-bottom: 73px;
+
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 2px;
+      background-color: $basic-green;
+      right: 100%;
+      position: absolute;
+      margin-right: 40px;
+      top: 19px;
+    }
+
+    &::after {
+      margin-left: 40px;
+      top: 19px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 23px;
+    }
+
+    &::after {
+      top: 23px;
+    }
   }
 }
 
@@ -283,16 +417,33 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 174px;
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 170px;
   }
 }
 
 .comment-fieldset {
-  margin-bottom: 23px;
+  margin-bottom: 16px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.comment-fieldset .selection-program__legend {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 76px;
   }
 }
 
@@ -303,20 +454,23 @@
   color: $basic-black;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    /*display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 104px;
-    white-space: nowrap;*/
+    grid-template-columns: repeat(4, 284px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 41px;
   }
 }
 
 .selection-program__checkbox-item {
-  padding-bottom: 13px;
+  padding-bottom: 24px;
+  padding-left: 46px;
+
 
   &:last-child {
     padding-bottom: 0;
@@ -324,6 +478,9 @@
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    padding-bottom: 0;
+    margin-bottom: 42px;
+    padding-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -336,12 +493,71 @@
   }
 }
 
+.selection-program__checkbox-input + .selection-program__checkbox-label::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: -6px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $special-checkbox;
+
+  @media (min-width: $tablet-width) {
+    width: 39px;
+    height: 39px;
+    left: -61px;
+    top: -3px;
+  }
+}
+
+.selection-program__checkbox-label:hover::before {
+  border: 1px solid $special-checkbox-hover;
+}
+
+.selection-program__checkbox-input:disabled + .selection-program__checkbox-label {
+  opacity: 0.3;
+}
+
+
+.selection-program__checkbox-input:checked + .selection-program__checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icon/check.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    left: -48px;
+    top: 8px;
+  }
+}
+
+
 .additionally-fieldset {
-  margin-bottom: 34px;
+  margin-bottom: 40px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.additionally-fieldset .selection-program__legend {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 60px;
   }
 }
 
@@ -351,7 +567,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 52px;
     grid-gap: 61px;
-    margin-bottom: 85px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-width) {
@@ -381,7 +597,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 21px 0 32px;
+  padding: 19px 0 32px;
   font-family: "Arial", "Verdana", sans-serif;
 
   @media (min-width: $tablet-width) {
