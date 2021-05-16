@@ -3,6 +3,19 @@
   width: auto;
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+
 .main-nav__toggle {
   border: none;
   position: absolute;
