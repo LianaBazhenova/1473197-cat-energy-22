@@ -1,6 +1,5 @@
 .page-header {
-  background-color: green;
-
+  // background-color: red;
   border-bottom: 1px solid $special-border-2;
 
   /*
@@ -19,6 +18,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {

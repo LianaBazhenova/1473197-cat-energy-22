@@ -89,7 +89,13 @@
 }
 
 .program-selection__image {
-  padding: 0 19px 0 20px;
+  &--slim {
+    padding: 0 19px 0 20px;
+  }
+
+  &--pro {
+    padding: 0 10px 0 13px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
