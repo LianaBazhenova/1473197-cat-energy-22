@@ -11,6 +11,7 @@ const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -74,6 +75,20 @@ const copyImages = () => {
 
 exports.images = copyImages;
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/icon-sprite/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+}
+
+exports.sprite = sprite;
+
+
 // Copy
 
 const copy = (done) => {
@@ -81,7 +96,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "!source/img/icon/*.svg",
   ], {
     base: "source"
   })
@@ -97,7 +112,6 @@ const clean = () => {
   return del("build");
 };
 
-exports.clean = clean;
 
 // Server
 
@@ -129,7 +143,7 @@ exports.reload = reload;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -141,7 +155,8 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts
+    scripts,
+    sprite
   ),
 );
 
@@ -156,10 +171,10 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts
+    scripts,
+    sprite
   ),
   gulp.series(
     server,
     watcher
   ));
-

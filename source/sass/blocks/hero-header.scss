@@ -1,4 +1,5 @@
 .hero-header {
+  //background-color: red;
   position: relative;
 
   &::before {
@@ -90,7 +91,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 38px 0 52px 80px;
+    padding: 40px 0 52px 80px;
   }
 }
 
@@ -114,7 +115,7 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    top: -5px;
+    top: 0;
     left: 522px;
   }
 }

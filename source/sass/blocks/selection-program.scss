@@ -137,12 +137,11 @@
     border: 2px solid $basic-text;
   }
 
-  &:focus + .selection-program__input-icon .selection-program__input-path,
-  &:focus + .selection-program__input-icon line {
+  &:focus + .selection-program__input-icon--email {
     stroke: $basic-green;
   }
 
-  &:focus + .selection-program__input-icon .selection-program__input-path2 {
+  &:focus + .selection-program__input-icon--phone {
     fill: $basic-green;
   }
 
@@ -152,13 +151,12 @@
     padding: 0 16px;
   }
 
-  &--error + .selection-program__input-icon .selection-program__input-path,
-  &--error + .selection-program__input-icon line {
+  &--error + .selection-program__input-icon {
     stroke: $special-error;
   }
 
-  &--error + .selection-program__input-icon .selection-program__input-path2 {
-    fill: $special-error;
+  &--error:focus + .selection-program__input-icon {
+    stroke: $special-error;
   }
 }
 
@@ -168,11 +166,13 @@
   &--email {
     top: 16px;
     right: 15px;
+    stroke: $checkbox-text;
   }
 
   &--phone {
     top: 13px;
     right: 13px;
+    fill: $basic-black;
   }
 
   @media (min-width: $tablet-width) {
@@ -231,7 +231,6 @@
   color: $checkbox-text;
   text-transform: uppercase;
 }
-
 
 .selection-program__radio-item {
   margin-bottom: 27px;
@@ -572,6 +571,7 @@
 
   @media (min-width: $desktop-width) {
     grid-gap: 81px;
+    margin-bottom: 79px;
   }
 }
 
@@ -603,5 +603,9 @@
   @media (min-width: $tablet-width) {
     justify-content: start;
     font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 7px;
   }
 }
