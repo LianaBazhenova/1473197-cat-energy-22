@@ -400,6 +400,29 @@
   }
 }
 
+.contacts-fieldset .selection-program__legend {
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green;
+    left: 100%;
+    position: absolute;
+    margin-left: -78px;
+    top: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 30px;
+      top: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 34px;
+      top: 21px;
+    }
+  }
+}
+
 .selection-program__textarea {
   border: 1px solid $special-border;
   resize: none;
@@ -469,7 +492,6 @@
 .selection-program__checkbox-item {
   padding-bottom: 24px;
   padding-left: 46px;
-
 
   &:last-child {
     padding-bottom: 0;
