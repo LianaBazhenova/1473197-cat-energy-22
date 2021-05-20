@@ -52,6 +52,18 @@
 }
 
 .social__list .social__icon {
+  &--vk {
+    fill: #666666;
+  }
+
+  &--instagram {
+    fill: #666666;
+  }
+
+  &--fb {
+    stroke: #666666;
+  }
+
   @media (min-width: $tablet-width) {
     &--vk {
       width: 30px;
@@ -61,15 +73,16 @@
     &--instagram {
       width: 23px;
       height: 23px;
+      fill: #666666;
     }
 
     &--fb {
       width: 28px;
       height: 33px;
+      stroke: #666666;
     }
   }
 }
-
 
 .social__item {
   &:nth-child(1) {
@@ -79,7 +92,6 @@
       padding-right: 27px;
     }
   }
-
 
   &:nth-child(2) {
     padding-right: 33px;
@@ -91,20 +103,22 @@
 }
 
 .social__link {
-  &:hover .social__fill {
+  &:hover .social__icon--vk,
+  &:hover .social__icon--instagram {
     fill: $basic-green;
   }
 
-  &:active .social__fill {
+  &:active .social__icon--vk,
+  &:active .social__icon--instagram {
     fill: $basic-green;
     opacity: 0.3;
   }
 
-  &:hover .social__stroke {
+  &:hover .social__icon--fb {
     stroke: $basic-green;
   }
 
-  &:active .social__stroke {
+  &:active .social__icon--fb {
     stroke: $basic-green;
     opacity: 0.3;
   }
@@ -117,11 +131,11 @@
   padding: 22px 0;
 
 
-  &:hover .fill {
+  &:hover .copyright__logo {
     fill: $basic-green;
   }
 
-  &:active .fill {
+  &:active .copyright__logo {
     fill: $basic-green;
     opacity: 0.3;
   }
@@ -154,4 +168,8 @@
   @media (min-width: $desktop-width) {
     padding: 8px 22px 0 0;
   }
+}
+
+.copyright__logo {
+  fill: #666666;
 }
