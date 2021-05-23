@@ -8,8 +8,8 @@
     <link rel="icon" href="img/Favicon/152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="./fonts/oswaldmedium.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="./fonts/oswaldregular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
@@ -27,7 +27,7 @@
           <img class="page-header__text" src="img/logo/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
     </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__wrapper main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
@@ -46,15 +46,15 @@
             <fieldset class="selection-program__fieldset representation-fieldset">
               <legend class="visually-hidden">Представьте кота</legend>
               <div class="selection-program__item">
-                <label class="selection-program__label" for="name">Имя:*</label>
+                <label class="selection-program__label selection-program__label--name" for="name">Имя:*</label>
                 <input class="selection-program__input" type="text" id="name" name="cat-name" value="Барсик" placeholder="Введите имя кота">
               </div>
               <div class="selection-program__item">
-                <label class="selection-program__label" for="weight">Вес (кг):*</label>
+                <label class="selection-program__label selection-program__label--weight" for="weight">Вес (кг):*</label>
                 <input class="selection-program__input" type="number" id="weight" name="cat-weight" value="7" placeholder="Введите вес кота">
               </div>
               <div class="selection-program__item">
-                <label class="selection-program__label" for="age">Возраст (лет):</label>
+                <label class="selection-program__label selection-program__label--age" for="age">Возраст (лет):</label>
                 <input class="selection-program__input" type="number" id="age" name="cat-age" value="7" placeholder="Введите возраст кота">
               </div>
             </fieldset>
@@ -81,7 +81,7 @@
               <legend class="selection-program__legend"><span>Контактные данные (владельца кота)</span></legend>
               <div class="selection-program__fieldset-wrap">
                 <div class="selection-program__item">
-                  <label class="selection-program__label" for="name">E-mail:*</label>
+                  <label class="selection-program__label selection-program__label--email" for="email">E-mail:*</label>
                   <input class="selection-program__input" type="text" id="email" name="cat-email" value="kuklachev@gmail.com" placeholder="Введите e-mail">
                   <svg class="selection-program__input-icon selection-program__input-icon--email" width="20" height="14" fill="none">
                     <use xlink:href="img/sprite.svg#icon_email"></use>
