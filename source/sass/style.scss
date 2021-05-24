@@ -1,10 +1,10 @@
-// Global
+/* Global */
 
 @import "global/variables.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
 
-//Blocks
+/* Blocks */
 
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
@@ -14,9 +14,17 @@
 @import "blocks/program-selection.scss";
 @import "blocks/advantages";
 @import "blocks/example";
+@import "blocks/slider.scss";
 @import "blocks/selection-program";
+@import "blocks/representation-fieldset.scss";
+@import "blocks/selection-fieldset.scss";
+@import "blocks/contacts-fieldset.scss";
+@import "blocks/comment-fieldset.scss";
+@import "blocks/additionally-fieldset.scss";
 @import "blocks/catalog.scss";
 @import "blocks/product.scss";
 @import "blocks/additional-catalog.scss";
 @import "blocks/map";
 @import "blocks/page-footer";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";

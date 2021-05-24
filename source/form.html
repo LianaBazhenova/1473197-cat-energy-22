@@ -15,7 +15,7 @@
   <body class="page__body">
 
     <header class="page-header">
-      <div class=" page-header__logo-wrapper">
+      <div class="page-header__logo-wrapper">
         <a class="page-header__logo-image" href="index.html">
           <picture>
             <source media="(min-width: 1220px)" srcset="img/logo/logo-desktop.svg ">
@@ -60,29 +60,29 @@
             </fieldset>
             <fieldset class="selection-program__fieldset selection-fieldset">
               <legend class="visually-hidden">Подбор программы</legend>
-              <ul class="selection-program__radio-list">
-                <li class="selection-program__radio-item">
-                  <input class="selection-program__radio-input visually-hidden" type="radio" name="cat-radio" id="slim" checked>
-                  <label class="selection-program__radio-label" for="slim">Похудение</label>
+              <ul class="selection-fieldset__radio-list">
+                <li class="selection-fieldset__radio-item">
+                  <input class="visually-hidden selection-fieldset__radio-input" type="radio" name="cat-radio" id="slim" checked>
+                  <label class="selection-fieldset__radio-label" for="slim">Похудение</label>
                 </li>
-                <li class="selection-program__radio-item">
-                  <input class="selection-program__radio-input visually-hidden" type="radio" name="cat-radio" id="pro">
-                  <label class="selection-program__radio-label" for="pro">Набор массы</label>
+                <li class="selection-fieldset__radio-item">
+                  <input class="visually-hidden selection-fieldset__radio-input" type="radio" name="cat-radio" id="pro">
+                  <label class="selection-fieldset__radio-label" for="pro">Набор массы</label>
                 </li>
-                <li class="selection-program__radio-item">
-                  <input class="selection-program__radio-input visually-hidden" type="radio" name="cat-radio" id="advice">
-                  <label class="selection-program__radio-label" for="advice">Не знаю (Нужен ваш совет)</label>
+                <li class="selection-fieldset__radio-item">
+                  <input class="visually-hidden selection-fieldset__radio-input" type="radio" name="cat-radio" id="advice">
+                  <label class="selection-fieldset__radio-label" for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
         </div>
           <div class="selection-program__wrapper">
             <fieldset class="selection-program__fieldset contacts-fieldset">
-              <legend class="selection-program__legend"><span>Контактные данные (владельца кота)</span></legend>
+              <legend class="selection-program__legend contacts-fieldset__legend"><span>Контактные данные (владельца кота)</span></legend>
               <div class="selection-program__fieldset-wrap">
                 <div class="selection-program__item">
                   <label class="selection-program__label selection-program__label--email" for="email">E-mail:*</label>
-                  <input class="selection-program__input" type="text" id="email" name="cat-email" value="kuklachev@gmail.com" placeholder="Введите e-mail">
+                  <input class="selection-program__input" type="email" id="email" name="cat-email" value="kuklachev@gmail.com" placeholder="Введите e-mail">
                   <svg class="selection-program__input-icon selection-program__input-icon--email" width="20" height="14" fill="none">
                     <use xlink:href="img/sprite.svg#icon_email"></use>
                   </svg>
@@ -98,29 +98,29 @@
             </fieldset>
 
             <fieldset class="selection-program__fieldset comment-fieldset">
-              <legend class="selection-program__legend"><span>Комментарий</span></legend>
-              <textarea class="selection-program__textarea" name="comment" id="cat-comment" cols="40" rows="10" placeholder="Расcкажите обо всех повадках кота">
+              <legend class="selection-program__legend comment-fieldset__legend"><span>Комментарий</span></legend>
+              <textarea class="comment-fieldset__textarea" name="comment" id="cat-comment" cols="40" rows="10" placeholder="Расcкажите обо всех повадках кота">
               </textarea>
             </fieldset>
 
             <fieldset class="selection-program__fieldset additionally-fieldset">
-              <legend class="selection-program__legend">Дополнительно</legend>
-              <ul class="selection-program__checkbox-list">
-                <li class="selection-program__checkbox-item">
-                  <input class="selection-program__checkbox-input visually-hidden" type="checkbox" name="cat-sweetener" id="sweetener" checked>
-                  <label class="selection-program__checkbox-label" for="sweetener">Сахарозаменитель</label>
+              <legend class="selection-program__legend additionally-fieldset__legend">Дополнительно</legend>
+              <ul class="additionally-fieldset__checkbox-list">
+                <li class="additionally-fieldset__checkbox-item">
+                  <input class="additionally-fieldset__checkbox-input visually-hidden" type="checkbox" name="cat-sweetener" id="sweetener" checked>
+                  <label class="additionally-fieldset__checkbox-label" for="sweetener">Сахарозаменитель</label>
                 </li>
-                <li class="selection-program__checkbox-item">
-                  <input class="selection-program__checkbox-input visually-hidden" type="checkbox" name="cat-water" id="water">
-                  <label class="selection-program__checkbox-label" for="water">Питьевая вода</label>
+                <li class="additionally-fieldset__checkbox-item">
+                  <input class="additionally-fieldset__checkbox-input visually-hidden" type="checkbox" name="cat-water" id="water">
+                  <label class="additionally-fieldset__checkbox-label" for="water">Питьевая вода</label>
                 </li>
-                <li class="selection-program__checkbox-item">
-                  <input class="selection-program__checkbox-input visually-hidden" type="checkbox" name="cat-milk" id="milk">
-                  <label class="selection-program__checkbox-label" for="milk">Молоко</label>
+                <li class="additionally-fieldset__checkbox-item">
+                  <input class="additionally-fieldset__checkbox-input visually-hidden" type="checkbox" name="cat-milk" id="milk">
+                  <label class="additionally-fieldset__checkbox-label" for="milk">Молоко</label>
                 </li>
-                <li class="selection-program__checkbox-item">
-                  <input class="selection-program__checkbox-input visually-hidden" type="checkbox" name="cat-vitamins" id="vitamins">
-                  <label class="selection-program__checkbox-label" for="vitamins">Витамины</label>
+                <li class="additionally-fieldset__checkbox-item">
+                  <input class="additionally-fieldset__checkbox-input visually-hidden" type="checkbox" name="cat-vitamins" id="vitamins">
+                  <label class="additionally-fieldset__checkbox-label" for="vitamins">Витамины</label>
                 </li>
               </ul>
             </fieldset>
@@ -149,9 +149,9 @@
       <div class="wrapper page-footer__wrapper">
         <h2 class="visually-hidden">Давайте дружить!</h2>
 
-        <div class="page-footer__logo footer-logo">
-          <a class="footer-logo__link">
-            <img class="footer-logo__image" src="img/logo/footer-logo-text.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+        <div class="page-footer__logo">
+          <a class="page-footer__link">
+            <img src="img/logo/footer-logo-text.svg" width="128" height="24" alt="Логотип Кэт энерджи">
           </a>
         </div>
 

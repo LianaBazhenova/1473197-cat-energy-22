@@ -1,0 +1,52 @@
+.comment-fieldset {
+  margin-bottom: 19px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.comment-fieldset .comment-fieldset__legend {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 76px;
+  }
+}
+
+.comment-fieldset__textarea {
+  border: 1px solid $special-border;
+  resize: none;
+  width: 98%;
+  height: 147px;
+  color: $basic-black;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::placeholder {
+    padding: 9px 12px 15px;
+    text-transform: uppercase;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 9px 15px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 169px;
+  }
+}

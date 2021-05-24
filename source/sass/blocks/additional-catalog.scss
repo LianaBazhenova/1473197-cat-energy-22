@@ -144,15 +144,6 @@
   }
 }
 
-.additional-catalog__list .product__item {
-  border-bottom: none;
-
-  @media (min-width: $desktop-width) {
-    margin-left: 27px;
-    margin-bottom: -9px;
-  }
-}
-
 .additional-catalog__image {
   justify-self: center;
   padding-top: 58px;
@@ -186,20 +177,5 @@
     padding: 5px 40px;
     text-align: center;
     margin-top: 14px;
-  }
-}
-
-.additional-catalog__button {
-  margin-bottom: 15px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 244px;
-    grid-column: 3/-1;
-    grid-row: 1/-1;
-    justify-self: end;
   }
 }
